@@ -16,7 +16,7 @@ function updatePeopleInfo() {
 function getFilteredPeople() {
   const name = document.getElementById('your-name').value;
   if (name) {
-    return PersonClass._getPeople().filter(person => person.getName().startsWith(name[0]));
+    return PersonClass._getPeople().filter(person => person.getName().startsWith(name[0]) || person.getName().startsWith(name[0].toUpperCase()));
   }
   return PersonClass._getPeople();
 }
