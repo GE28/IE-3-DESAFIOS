@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Syne:wght@400;600&display=swap');
+
+html, body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
+}
+
+.person-form {
+  grid-area: person-form;
+}
+
+.people {
+  grid-area: people;
+}
+
+.your-form {
+  grid-area: your-form;
+}
+
+.container {
+  display: grid;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "person-form people ."
+    ".           people ."
+    ".           people your-form";
+}
+
+form {
+  padding: 20px;
+  background-color: #fffeff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form fieldset {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  margin-top: auto;
+  margin-bottom: 8px;
+  background-color: #226d5c;
+  color: #fff;
+  font-weight: 600;
+}
+
+.your-form .your-status {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.your-form .your-status.danger {
+  color: #f00;
+}
+
+form input {
+  display: block;
+}
+
+.people {
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.person {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 2fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas:
+    "photo name remove-button"
+    "photo age  remove-button";
+  column-gap: 10px;
+
+  width: 100%;
+  height: 10%;
+  
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.person > p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: start;
+}
+
+.person > p.name {
+  grid-area: name;
+  font-size: 1.5rem;
+  font-weight: 600;
+  align-items: flex-end;
+}
+
+.person > p.age {
+  grid-area: age;
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-items: flex-start;
+}
+
+.person > img {
+  grid-area: photo;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.person > p {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.person > button {
+  grid-area: remove-button;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.person > button > i {
+  grid-area: remove-button;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.person.average .age {
+  display: block;
+  text-overflow: ellipsis;
+  max-width: 50px;
+}

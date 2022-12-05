@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="module"></script>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Desafio 1 para Capacitação</title>
+</head>
+<body>
+    <div class="container">
+        <form id="person-form" class="person-form" onsubmit="addPerson(document.getElementById('name').value, document.getElementById('age').value)">
+            <fieldset id="person-fieldset">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite um nome">
+
+                <label for="age">Idade</label>
+                <input type="number" id="age" name="age" placeholder="Digite uma idade">
+
+                <input type="submit" value="Adicionar">
+            </fieldset>
+        </form>
+
+        <form id="your-form" class="your-form" onsubmit="fillName(document.getElementById('your-name').value)">
+          <fieldset id="your-fieldset">
+              <label for="your-name">Seu nome</label>
+              <input type="text" id="your-name" name="your-name" placeholder="Digite seu nome">
+              <p class="your-status danger" id="your-status">Nenhum nome foi inserido</p>
+              <input type="submit" value="Preencher">
+          </fieldset>
+        </form>
+
+        <div id="people" class="people">
+          <div class="average person">
+            <p class="name">Média</p>
+            <p class="age">N/A</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Solid_white.svg"></div>
+        </div>
+    </div>
+
+    <script>
+      document.getElementById("person-form").addEventListener("submit", (event) =>{
+        event.preventDefault();
+      });
+
+      document.getElementById("your-form").addEventListener("submit", (event) =>{
+        event.preventDefault();
+      });
+    </script>
+</body>
+</html>
