@@ -24,8 +24,7 @@ function getFilteredPeople() {
 function getAverageAge() {
   const people = getFilteredPeople();
   const totalAge = people.reduce((total, person) => total + Number(person.getAge()), 0);
-  console.log(totalAge);
-  return totalAge / people.length || 'N/A';
+  return Math.ceil(totalAge / people.length) || 'N/A';
 }
 
 function getAverage() {
