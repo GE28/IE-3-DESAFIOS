@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <script>
+    <script type="module">
       document.getElementById("person-form").addEventListener("submit", (event) =>{
         event.preventDefault();
       });
@@ -51,6 +51,10 @@
       document.getElementById("your-form").addEventListener("submit", (event) =>{
         event.preventDefault();
       });
+
+      addPerson("Breno", 22);
+      addPerson("Marcus", 21);
+      addPerson("Bruna", 24);
     </script>
 </body>
 </html>
