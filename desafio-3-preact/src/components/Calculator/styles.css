@@ -1,0 +1,9 @@
+.calcContainer {
+    width: 36em;
+    height: 36em;
+    border: 0;
+}
+
+.orientation-revert {
+    direction: rtl
+}

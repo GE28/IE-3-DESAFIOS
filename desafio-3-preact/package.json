@@ -1,0 +1,46 @@
+{
+  "name": "desafio-2-react",
+  "version": "1.0.0",
+  "description": "Calculadora básica desenvolvida em Preact",
+  "main": "./src/index.tsx",
+  "scripts": {
+    "build": "npm run typecheck && webpack --mode production --progress",
+    "dev": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/GE28/IE-3-DESAFIOS"
+  },
+  "keywords": [
+    "calculadora",
+    "react"
+  ],
+  "author": "GE28",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "core-js": "^3.26.1",
+    "css-loader": "^6.7.3",
+    "postcss": "^8.4.20",
+    "postcss-loader": "^7.0.2",
+    "regenerator-runtime": "^0.13.11",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "react": "npm:@preact/compat@^17.1.2",
+    "react-dom": "npm:@preact/compat@^17.1.2"
+  }
+}
